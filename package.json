@@ -1,5 +1,6 @@
 {
   "name": "cordova-plugin-visa-checkout",
+  "cordova_name": "Cordova Visa Checkout Plugin",
   "version": "0.0.1",
   "description": "Plugin Cordova to Visa Checkout",
   "scripts": {

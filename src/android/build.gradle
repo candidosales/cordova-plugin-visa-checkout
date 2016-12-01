@@ -1,0 +1,23 @@
+repositories{    
+  jcenter()
+  flatDir {
+      dirs 'libs'
+   }
+}
+
+repositories {
+    flatDir { dirs 'libs' }
+}
+
+dependencies {
+    // Visa dependencies
+    compile(name: 'VisaCheckout-Android-SDK-4.0', ext: 'aar')
+    compile(name: 'card.io-5.3.0', ext: 'aar')
+}
+
+android {
+  packagingOptions {
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/LICENSE'
+  }
+}
