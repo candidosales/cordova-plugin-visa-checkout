@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-visa-checkout",
+  "version": "0.0.1",
+  "description": "Plugin Cordova to Visa Checkout",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/candidosales/cordova-plugin-visa-checkout.git"
+  },
+  "cordova": {
+    "id": "cordova-plugin-visa-checkout",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "platforms": [
+    "android"
+  ],
+  "author": "VC+ Team - BrasilCT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/candidosales/cordova-plugin-visa-checkout/issues"
+  },
+  "homepage": "https://github.com/candidosales/cordova-plugin-visa-checkout#readme"
+}

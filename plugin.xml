@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-visa-checkout" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>VisaCheckout</name>
+    <js-module name="VisaCheckout" src="www/VisaCheckout.js">
+        <clobbers target="cordova.plugins.VisaCheckout" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="VisaCheckout">
+                <param name="android-package" value="cordova-plugin-visa-checkout.VisaCheckout" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.READ_CALENDAR"/>
+
+            <!-- Version Android -->
+            <uses-permission android:name="android.permission.WAKE_LOCK" />
+            <!-- Permissions needed by Visa XO SDK -->
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <!-- card.io: Permission to use camera - required -->
+            <uses-permission android:name="android.permission.CAMERA" />
+            <!-- card.io: Permission to vibrate - recommended, allows vibration feedback on scan -->
+            <uses-permission android:name="android.permission.VIBRATE" />
+            <!-- Android Fingerprint -->
+            <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+            <!-- Samsung pass -->
+            <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
+            <!-- card.io: Camera features - recommended -->
+            <uses-feature
+                android:name="android.hardware.camera"
+                android:required="false" />
+            <!-- making camera autofocus as true because of tablet support -->
+            <uses-feature
+                android:name="android.hardware.camera.autofocus"
+                android:required="true" />
+            <uses-feature
+                android:name="android.hardware.camera.flash"
+                android:required="false" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Permissions needed by Visa XO SDK -->
+            <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+        </config-file>
+        <source-file src="src/android/VisaCheckout.java" target-dir="src/cordova-plugin-visa-checkout/VisaCheckout" />
+
+    </platform>
+</plugin>
