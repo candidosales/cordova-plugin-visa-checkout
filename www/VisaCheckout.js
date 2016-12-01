@@ -42,7 +42,7 @@ var VisaCheckout = function(options) {
 };
 
 VisaCheckout.prototype.getNextAppointment = function(successCallback, errorCallback, args) {
-    exec(success, error, "VisaCheckout", "getNextAppointment", [args]);
+    exec(successCallback, errorCallback, "VisaCheckout", "getNextAppointment", [args]);
 }
 
 module.exports = {
