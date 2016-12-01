@@ -41,7 +41,7 @@ var VisaCheckout = function(options) {
     this.options = options;
 };
 
-PushNotification.prototype.getNextAppointment = function(successCallback, errorCallback, args) {
+VisaCheckout.prototype.getNextAppointment = function(successCallback, errorCallback, args) {
     exec(success, error, "VisaCheckout", "getNextAppointment", [args]);
 }
 
